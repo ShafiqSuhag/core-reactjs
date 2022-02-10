@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react';
+import "./basicexample.module.css";
 
 const BasicExample = () => {
     // basic example 
@@ -76,7 +77,7 @@ const BasicExample = () => {
     }
     //Performing multiple concurrent requests
     const getTableListes = () =>{
-        return axios.get("https://react-deploy.rooberp.com/restaurant-backend/api/restaurant-tables1")
+        return axios.get("https://react-deploy.rooberp.com/restaurant-backend/api/restaurant-tables")
     }
     const getReservationListes = () =>{
         return axios.get("https://react-deploy.rooberp.com/restaurant-backend/api/reservation-listes")
@@ -101,6 +102,7 @@ const BasicExample = () => {
             <button onClick={usersListAsync}>Use axios as async</button>
             <button onClick={createNewTable}>POST - Create new table</button>
             <button onClick={MultipleRequest}> concurrent MultipleRequest</button>
+          
         </div>
     );
 };
